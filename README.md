@@ -1,73 +1,80 @@
-# React + TypeScript + Vite
+# 📁 Portfólio — João Victor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao meu portfólio!
 
-Currently, two official plugins are available:
+Aqui reúno meus principais projetos de Desenvolvimento Web, Machine Learning, Inteligência Artificial e soluções construídas ao longo da minha jornada como desenvolvedor. Este repositório serve como um hub para apresentar minhas habilidades técnicas, meu estilo de código e minha evolução contínua como profissional de tecnologia.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologias e Áreas de Atuação
 
-## React Compiler
+    Frontend: React, TypeScript, TailwindCSS
+    Backend: Laravel, Python
+    Banco de Dados: MySQL, PostgreSQL
+    Machine Learning: Python, Scikit-Learn, Pandas, Numpy
+    Dev Tools: Git, GitHub, VSCode
+    Outros: UX/UI básico, APIs REST, autenticação, integração de pagamentos
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🧩 Projetos em Destaque
 
-## Expanding the ESLint configuration
+🔹 QTime — Sistema de Agendamento de Quadras
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Sistema web completo para agendamento de quadras da Euro Society.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Inclui:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+    Reservas online
+    Pagamento via Pix
+    Fila de espera
+    Painel administrativo
+    Dashboard financeiro
+    Login Google
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Tecnologias: React + Laravel + MySQL + TailwindCSS
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+➡️ Repositório: https://github.com/joaovardenski/EuroSociety-Front
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+🔹 Autism Spectrum Prediction — Machine Learning
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Modelo de Machine Learning para prever sinais do espectro autista utilizando dados reais, pré-processamento avançado e análise estatística.
+
+➡️ Repositório: https://github.com/joaovardenski/previsao-espectro-autista
+
+🔹 Meu Portfólio Pessoal
+
+Site moderno, animado com Framer Motion e totalmente responsivo feito em React + Tailwind.
+
+➡️ Repositório: https://github.com/joaovardenski/Portfolio-JV
+
+➡️ Deploy: https://portfolio-jv-two.vercel.app/
+
+## 🎨 Design & Filosofia
+
+Busco criar aplicações:
+
+    rápidas
+    intuitivas
+    responsivas
+    com código limpo e organizado
+    seguindo boas práticas de arquitetura
+
+Acredito que tecnologia deve ser simples, útil e acessível.
+
+## 📬 Contato
+
+Se quiser trocar uma ideia, colaborar em projetos ou me contratar:
+
+    Email: joaovvandrade@gmail.com
+
+    LinkedIn: (adicione aqui se quiser)
+
+    Portfólio online: (adicione aqui sua URL quando estiver no ar)
+
+## ⭐ Como Navegar
+
+Cada projeto está em uma pasta separada, com seu próprio README explicando:
+
+    contexto
+    funcionalidades
+    tecnologias
+    como rodar localmente
+
+Sinta-se à vontade para explorar!
