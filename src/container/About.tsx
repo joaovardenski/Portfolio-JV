@@ -23,7 +23,7 @@ const About = () => {
       </h2>
 
       {/* ===== PROFILES GRID ===== */}
-      <div className="flex flex-wrap justify-center items-start mt-12 gap-8">
+      <div className="flex flex-wrap justify-center items-start mt-12 gap-10">
         {abouts.map((about, index) => (
           <motion.div
             key={about.title + index}
@@ -31,12 +31,17 @@ const About = () => {
             initial={{ opacity: 0 }}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.4, type: "tween" }}
-            className="w-44 md:w-56 flex flex-col items-start bg-white rounded-xl shadow-lg p-4"
+            className="
+              w-[85%] max-w-80 md:w-62 
+              flex flex-col items-start 
+              bg-white rounded-xl shadow-lg 
+              p-5
+            "
           >
             <img
               src={about.imgUrl}
               alt={about.title}
-              className="w-full h-40 md:h-56 object-cover rounded-lg"
+              className="w-full h-48 md:h-56 object-cover rounded-lg"
             />
 
             <h3 className="mt-4 text-lg font-semibold">{about.title}</h3>
@@ -44,6 +49,7 @@ const About = () => {
           </motion.div>
         ))}
       </div>
+
     </section>
   );
 };

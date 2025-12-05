@@ -95,7 +95,7 @@ const Testimonial = () => {
             key={index}
             whileInView={{ opacity: [0, 1] }}
             transition={{ duration: 0.5 }}
-            className="w-32 sm:w-40 hover:grayscale-0 grayscale transition-all duration-300"
+            className="w-32 sm:w-40 hover:grayscale-0 lg:grayscale transition-all duration-300"
           >
             <img
               src={brand.imgUrl}

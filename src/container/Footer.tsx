@@ -62,8 +62,8 @@ const Footer = () => {
 
       {/* CONTACT CARDS */}
       <div className="w-full md:w-3/5 flex flex-wrap justify-evenly items-center mt-12 mb-8 gap-4">
-        <div className="min-w-[260px] flex items-center p-4 rounded-xl cursor-pointer bg-red-50 hover:shadow-xl transition-all">
-          <img src={images.email} alt="email" className="w-10 h-10 mr-4" />
+        <div className="min-w-[260px] flex items-center p-4 rounded-xl cursor-pointer bg-blue-50 hover:shadow-xl transition-all">
+          <img src={images.email} alt="email" className="w-10 h-7 mr-4" />
           <a href="mailto:joaovvandrade@gmail.com" className="text-gray-700 font-medium">
             joaovvandrade@gmail.com
           </a>

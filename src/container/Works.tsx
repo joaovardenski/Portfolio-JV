@@ -16,11 +16,9 @@ const Works = () => {
     if (item === activeFilter) return;
     setActiveFilter(item);
 
-    // anima para baixo e fade out
     setAnimateCard({ y: 100, opacity: 0 });
 
     setTimeout(() => {
-      // volta a posição e filtra os cards
       setAnimateCard({ y: 0, opacity: 1 });
 
       if (item === "All") {
@@ -28,7 +26,7 @@ const Works = () => {
       } else {
         setFilterWork(works.filter((work) => work.tags.includes(item)));
       }
-    }, 400); // deve ser parecido com a duração da animação
+    }, 400);
   };
 
   return (
