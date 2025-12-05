@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
+import jvicon from '../../assets/jvlogo.png';
 import { motion } from 'framer-motion';
 
 const Navbar = () => {
@@ -19,7 +20,8 @@ const Navbar = () => {
       "
     >
       {/* LOGO */}
-      <div className="flex justify-start items-center">
+      <div className="flex justify-start items-center gap-3">
+        <img src={jvicon} alt="" className='w-12'/>
         <p className="bg-linear-to-r from-black to-gray-500 bg-clip-text text-transparent text-4xl font-bold">
           João Victor
         </p>
