@@ -11,6 +11,7 @@ const Works = () => {
   const [filterWork, setFilterWork] = useState(worksData);
   const [activeFilter, setActiveFilter] = useState("All");
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
+  const [activeOverlay, setActiveOverlay] = useState<number | null>(null);
 
   const handleWorkFilter = (item: string) => {
     if (item === activeFilter) return;
@@ -62,6 +63,7 @@ const Works = () => {
           <article
             key={work.id}
             className="relative bg-white rounded-lg shadow-md overflow-hidden"
+            onClick={() => setActiveOverlay(activeOverlay === work.id ? null : work.id)}
           >
             {/* IMAGE WRAPPER */}
             <div className="relative w-full h-52 md:h-64">
@@ -74,6 +76,7 @@ const Works = () => {
               {/* Hover overlay */}
               <motion.div
                 initial={{ opacity: 0 }}
+                animate={{ opacity: activeOverlay === work.id ? 1 : 0 }}
                 whileHover={{ opacity: 1 }}
                 transition={{ duration: 0.25, ease: "easeInOut" }}
                 className="absolute inset-0 bg-black/50 flex items-center justify-center gap-4 opacity-0"
