@@ -64,9 +64,9 @@ Se quiser trocar uma ideia, colaborar em projetos ou me contratar:
 
     Email: joaovvandrade@gmail.com
 
-    LinkedIn: (adicione aqui se quiser)
+    LinkedIn: https://www.linkedin.com/in/jo%C3%A3o-vardenski/
 
-    Portfólio online: (adicione aqui sua URL quando estiver no ar)
+    Portfólio online: https://portfolio-jv-two.vercel.app/
 
 ## ⭐ Como Navegar
 
