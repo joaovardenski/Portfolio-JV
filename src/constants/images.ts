@@ -10,9 +10,11 @@ import figma from '../assets/figma.png';
 import git from '../assets/git.png';
 import github from '../assets/github.png';
 import laravel from '../assets/laravel.png';
+import lume from '../assets/lume.png';
 import javascript from '../assets/javascript.png';
 import marcio from '../assets/marcio.jpg';
 import mirian from '../assets/mirian.jpg';
+import node from '../assets/node.png';
 import python from '../assets/python.png';
 import rastrehability from '../assets/rastrehability.png';
 import rastrehabilityLogo from '../assets/rastrehabilityLogo.png';
@@ -46,9 +48,11 @@ export default {
   git,
   github,
   laravel,
+  lume,
   javascript,
   marcio,
   mirian,
+  node,
   python,
   rastrehability,
   rastrehabilityLogo,

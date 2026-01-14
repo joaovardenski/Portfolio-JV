@@ -62,12 +62,10 @@ const Header = () => {
         />
       </div>
 
-      {/* ======= SKILL CIRCLES ======= */}
         <div className="hidden md:flex flex-1 flex-col justify-evenly items-start gap-8 ml-4 md:ml-8 mt-12 md:mt-0">
-          {[images.react, images.typescript, images.tailwind].map((circle, i) => {
+          {[images.react, images.typescript, images.node].map((circle, i) => {
 
-            // Durations diferentes para cada bolha
-            const durations = [4, 5, 6]; // normal, slow, fast
+            const durations = [4, 5, 6];
 
             return (
               <motion.div

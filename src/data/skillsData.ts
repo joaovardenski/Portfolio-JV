@@ -17,6 +17,11 @@ export const skillsData = [
     icon: images.tailwind,
   },
   {
+    name: "Node.js",
+    bgColor: "#e0f2fe",
+    icon: images.node,
+  },
+  {
     name: "Laravel",
     bgColor: "#ffe4e6",
     icon: images.laravel,
