@@ -1,4 +1,5 @@
 import autism from '../assets/autism.jpg';
+import docker from '../assets/docker.png';
 import email from '../assets/email.png';
 import eurologo from '../assets/eurologo.png';
 import mobile from '../assets/mobile.png';
@@ -37,6 +38,7 @@ import uepg from '../assets/uepg.png';
 
 export default {
   autism,
+  docker,
   email,
   mobile,
   bgIMG,

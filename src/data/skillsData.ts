@@ -47,6 +47,11 @@ export const skillsData = [
     icon: images.github,
   },
   {
+    name: "Docker",
+    bgColor: "#eff6ff",
+    icon: images.docker,
+  },
+  {
     name: "Figma",
     bgColor: "#f0fdf4",
     icon: images.figma,
