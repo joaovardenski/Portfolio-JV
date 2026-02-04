@@ -3,7 +3,7 @@ import { images } from "../constants";
 export const aboutsData = [
   {
     title: "Full Stack Developer",
-    description: "I build complete systems using React, TypeScript, PHP, and MySQL. Focused on performance, UX, and scalable solutions.",
+    description: "I build complete systems using React, TypeScript, Node.js, and MySQL. Focused on performance, UX, and scalable solutions.",
     imgUrl: images.rastrehability,
   },
   {

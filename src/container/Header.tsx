@@ -38,7 +38,7 @@ const Header = () => {
 
           {/* Tags */}
           <div className="flex flex-col px-6 py-4 bg-white rounded-2xl shadow-xl text-right md:text-left">
-            <p className="text-gray-600 tracking-wide">Web Developer</p>
+            <p className="text-gray-600 tracking-wide">Full-Stack Developer</p>
             <div className="w-20 h-0.5 bg-gray-300 my-1 rounded-full"></div>
             <p className="text-gray-600 tracking-wide">Software Enginner Student</p>
           </div>
