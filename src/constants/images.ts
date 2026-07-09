@@ -1,4 +1,5 @@
 import autism from '../assets/autism.jpg';
+import dioceseUV from '../assets/dioceseUV.png';
 import docker from '../assets/docker.png';
 import email from '../assets/email.png';
 import eurologo from '../assets/eurologo.png';
@@ -27,6 +28,7 @@ import solarmansite from '../assets/solarmansite.png';
 import sql from '../assets/sql.png';
 import tailwind from '../assets/tailwind.png';
 import typescript from '../assets/typescript.png';
+import vibracaoJovem from '../assets/vibracaoJovem.png';
 
 import about10 from '../assets/about10.png';
 import about12 from '../assets/about12.png';
@@ -38,6 +40,7 @@ import uepg from '../assets/uepg.png';
 
 export default {
   autism,
+  dioceseUV,
   docker,
   email,
   mobile,
@@ -71,4 +74,5 @@ export default {
   profile,
   circle,
   uepg,
+  vibracaoJovem,
 };

@@ -4,7 +4,7 @@ import { AiFillEye, AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
 import { worksData } from "../data/worksData";
 
-const FILTERS = ["React JS", "Node.js", "Web App", "UI/UX", "Machine Learning", "All"];
+const FILTERS = ["React JS", "Node.js", "Laravel", "Web App", "UI/UX", "Machine Learning", "All"];
 
 const Works = () => {
   const works = worksData;

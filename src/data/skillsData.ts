@@ -58,7 +58,6 @@ export const skillsData = [
   },
 ];
 
-
 export const experiencesData = [
   {
     year: "2022",
@@ -66,7 +65,7 @@ export const experiencesData = [
       {
         name: "Agricultural Salesperson",
         company: "Agropecuária Faxinal Ltda",
-        desc: "Realizei vendas de insumos agrícolas, atendendo clientes e oferecendo soluções personalizadas para suas necessidades no campo.",
+        desc: "Provided agricultural product sales, customer support, and tailored solutions for farmers and rural businesses.",
       },
     ],
   },
@@ -75,20 +74,20 @@ export const experiencesData = [
     year: "2024",
     works: [
       {
-        name: "Researcher Assistant",
-        company: "Universidade Estadual de Ponta Grossa - UEPG",
-        desc: "Realizei pesquisas na área de rastreabilidade agrícola, focando em tecnologias descentralizadas como blockchain para melhorar a transparência na cadeia de suprimentos.",
+        name: "Research Assistant",
+        company: "State University of Ponta Grossa (UEPG)",
+        desc: "Conducted research on agricultural traceability using blockchain technologies to improve supply chain transparency.",
       },
     ],
   },
-  
+
   {
     year: "2024",
     works: [
       {
-        name: "UI/UX Designer - Freelancer",
-        company: "Cooperativa SolarMan",
-        desc: "Atuei no desenvolvimento de interfaces modernas para um sistema de orçamentos de energia solar utilizando o Figma.",
+        name: "Freelance UI/UX Designer",
+        company: "SolarMan Cooperative",
+        desc: "Designed modern user interfaces and user experiences for a solar energy quotation and management platform using Figma.",
       },
     ],
   },
@@ -97,9 +96,20 @@ export const experiencesData = [
     year: "2025",
     works: [
       {
-        name: "Fullstack Developer - Freelancer",
+        name: "Freelance Full-Stack Developer",
         company: "Euro Sports & Bar",
-        desc: "Desenvolvi uma aplicação web completa para agendamento de quadras online, utilizando React no frontend e Laravel no backend.",
+        desc: "Built a complete sports court booking platform using React for the frontend and Laravel for the backend.",
+      },
+    ],
+  },
+
+  {
+    year: "2026",
+    works: [
+      {
+        name: "Freelance Full-Stack Developer",
+        company: "Diocese of União da Vitória",
+        desc: "Developed an event registration platform with online registration, Pix payments, and an admin dashboard using React and Laravel.",
       },
     ],
   },

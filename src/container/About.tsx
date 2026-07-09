@@ -11,16 +11,16 @@ const About = () => {
     >
       {/* ===== TITLE ===== */}
       <h2 className="text-3xl md:text-5xl font-bold text-center leading-tight">
-        I Know that{" "}
-        <span className="text-transparent bg-clip-text bg-linear-to-r from-black to-gray-600">
-          Good Design
-        </span>
-        <br />
-        means{" "}
-        <span className="text-transparent bg-clip-text bg-linear-to-r from-black to-gray-600">
-          Good Business
-        </span>
-      </h2>
+  Building{" "}
+  <span className="text-transparent bg-clip-text bg-linear-to-r from-black to-gray-600">
+    Reliable Software
+  </span>
+  <br />
+  for{" "}
+  <span className="text-transparent bg-clip-text bg-linear-to-r from-black to-gray-600">
+    Better Experiences
+  </span>
+</h2>
 
       {/* ===== PROFILES GRID ===== */}
       <div className="flex flex-wrap justify-center items-start mt-12 gap-10">

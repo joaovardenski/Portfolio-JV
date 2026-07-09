@@ -44,5 +44,14 @@ export const worksData = [
     codeLink: "https://github.com/joaovardenski/Lume-front",
     tags: ["Node.js", "Web App", "React JS"],
   },
+  {
+    id: 6,
+    title: "Vibração Jovem 2026 — Event Registration Platform",
+    description: "Full-stack event registration platform with Pix payments, participant management, and an admin dashboard.",
+    imgUrl: images.vibracaoJovem,
+    projectLink: "https://vibracao-web.vercel.app/",
+    codeLink: "https://github.com/joaovardenski/vibracao-web",
+    tags: ["Laravel", "React JS", "Web App",],
+  },
 ];
 
