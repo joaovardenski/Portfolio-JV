@@ -30,5 +30,5 @@ export const brandsData = [
   { name: "UEPG", imgUrl: images.uepg },
   { name: "Solarman", imgUrl: images.solarman },
   { name: "Diocese de União da Vitória", imgUrl: images.dioceseUV },
-  { name: "Agropecuária Faxinal", imgUrl: images.faxinal },
+  { name: "Baston Aerosóis", imgUrl: images.baston },
 ];

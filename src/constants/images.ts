@@ -1,4 +1,5 @@
 import autism from '../assets/autism.jpg';
+import baston from '../assets/baston.webp';
 import dioceseUV from '../assets/dioceseUV.png';
 import docker from '../assets/docker.png';
 import email from '../assets/email.png';
@@ -40,6 +41,7 @@ import uepg from '../assets/uepg.png';
 
 export default {
   autism,
+  baston,
   dioceseUV,
   docker,
   email,

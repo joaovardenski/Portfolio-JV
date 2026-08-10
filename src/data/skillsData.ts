@@ -60,17 +60,6 @@ export const skillsData = [
 
 export const experiencesData = [
   {
-    year: "2022",
-    works: [
-      {
-        name: "Agricultural Salesperson",
-        company: "Agropecuária Faxinal Ltda",
-        desc: "Provided agricultural product sales, customer support, and tailored solutions for farmers and rural businesses.",
-      },
-    ],
-  },
-
-  {
     year: "2024",
     works: [
       {
@@ -110,6 +99,17 @@ export const experiencesData = [
         name: "Freelance Full-Stack Developer",
         company: "Diocese of União da Vitória",
         desc: "Developed an event registration platform with online registration, Pix payments, and an admin dashboard using React and Laravel.",
+      },
+    ],
+  },
+
+  {
+    year: "2026",
+    works: [
+      {
+        name: "QA Automation Intern",
+        company: "Baston Aerosóis",
+        desc: "Working in Quality Assurance, contributing to software testing and process automation, data analysis and validation using SQL, and bug identification to improve system quality and reliability.",
       },
     ],
   },
