@@ -1,7 +1,16 @@
 import { images } from "../constants";
 
-// src/data/worksData.js
-export const worksData = [
+export interface WorkItem {
+  id: number;
+  title: string;
+  description: string;
+  imgUrl: string;
+  projectLink?: string;
+  codeLink?: string;
+  tags: string[];
+}
+
+export const worksData: WorkItem[] = [
   {
     id: 1,
     title: "UI/UX Design - RastreHability Platform",

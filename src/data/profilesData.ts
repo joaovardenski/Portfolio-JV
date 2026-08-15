@@ -1,6 +1,12 @@
 import { images } from "../constants";
 
-export const aboutsData = [
+export interface Profile {
+  title: string;
+  description: string;
+  imgUrl: string;
+}
+
+export const profilesData: Profile[] = [
   {
     title: "Full Stack Developer",
     description: "I build complete systems using React, TypeScript, Node.js, and MySQL. Focused on performance, UX, and scalable solutions.",
@@ -17,5 +23,3 @@ export const aboutsData = [
     imgUrl: images.solarmansite,
   },
 ];
-
-

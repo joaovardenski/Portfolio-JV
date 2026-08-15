@@ -1,33 +1,32 @@
-// src/container/Works.jsx
 import { useState } from "react";
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
 import { worksData } from "../data/worksData";
 
 const FILTERS = ["React JS", "Node.js", "Laravel", "Web App", "UI/UX", "Machine Learning", "All"];
+const FILTER_TRANSITION_MS = 400;
 
 const Works = () => {
-  const works = worksData;
-  const [filterWork, setFilterWork] = useState(worksData);
+  const [filteredWorks, setFilteredWorks] = useState(worksData);
   const [activeFilter, setActiveFilter] = useState("All");
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
-  const [activeOverlay, setActiveOverlay] = useState<number | null>(null);
+  const [hoveredWorkId, setHoveredWorkId] = useState<number | null>(null);
 
-  const handleWorkFilter = (item: string) => {
-    if (item === activeFilter) return;
-    setActiveFilter(item);
+  const handleWorkFilter = (filterTag: string) => {
+    if (filterTag === activeFilter) return;
+    setActiveFilter(filterTag);
 
     setAnimateCard({ y: 100, opacity: 0 });
 
     setTimeout(() => {
       setAnimateCard({ y: 0, opacity: 1 });
 
-      if (item === "All") {
-        setFilterWork(works);
+      if (filterTag === "All") {
+        setFilteredWorks(worksData);
       } else {
-        setFilterWork(works.filter((work) => work.tags.includes(item)));
+        setFilteredWorks(worksData.filter((work) => work.tags.includes(filterTag)));
       }
-    }, 400);
+    }, FILTER_TRANSITION_MS);
   };
 
   return (
@@ -38,17 +37,17 @@ const Works = () => {
 
       {/* Filters */}
       <div className="flex flex-wrap justify-center gap-3 mt-8">
-        {FILTERS.map((item) => (
+        {FILTERS.map((filterTag) => (
           <button
-            key={item}
-            onClick={() => handleWorkFilter(item)}
+            key={filterTag}
+            onClick={() => handleWorkFilter(filterTag)}
             className={`px-4 py-2 rounded-full font-semibold transition-all duration-300
-              ${activeFilter === item
+              ${activeFilter === filterTag
                 ? "bg-indigo-600 text-white shadow-md"
                 : "bg-white text-gray-700 border border-gray-200 hover:bg-gray-100"}
             `}
           >
-            {item}
+            {filterTag}
           </button>
         ))}
       </div>
@@ -59,11 +58,11 @@ const Works = () => {
         transition={{ duration: 0.45, ease: "easeInOut" }}
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center items-start mt-10"
       >
-        {filterWork.map((work) => (
+        {filteredWorks.map((work) => (
           <article
             key={work.id}
             className="relative bg-white rounded-lg shadow-md overflow-hidden"
-            onClick={() => setActiveOverlay(activeOverlay === work.id ? null : work.id)}
+            onClick={() => setHoveredWorkId(hoveredWorkId === work.id ? null : work.id)}
           >
             {/* IMAGE WRAPPER */}
             <div className="relative w-full h-52 md:h-64">
@@ -76,7 +75,7 @@ const Works = () => {
               {/* Hover overlay */}
               <motion.div
                 initial={{ opacity: 0 }}
-                animate={{ opacity: activeOverlay === work.id ? 1 : 0 }}
+                animate={{ opacity: hoveredWorkId === work.id ? 1 : 0 }}
                 whileHover={{ opacity: 1 }}
                 transition={{ duration: 0.25, ease: "easeInOut" }}
                 className="absolute inset-0 bg-black/50 flex items-center justify-center gap-4 opacity-0"

@@ -1,8 +1,13 @@
-// src/data/testimonialsData.ts
-
 import { images } from "../constants";
 
-export const testimonialsData = [
+export interface Testimonial {
+  name: string;
+  company: string;
+  feedback: string;
+  imgurl: string;
+}
+
+export const testimonialsData: Testimonial[] = [
   {
     name: "Maria Salete Marcon Gomes Vaz",
     company: "Universidade Estadual de Ponta Grossa (UEPG)",
@@ -24,11 +29,4 @@ export const testimonialsData = [
       "Cumpriu suas funções como vendedor perfeitamente, com boa comunicação, e seriedade, recomendo para próximos trabalhos!",
     imgurl: images.marcio,
   },
-];
-
-export const brandsData = [
-  { name: "UEPG", imgUrl: images.uepg },
-  { name: "Solarman", imgUrl: images.solarman },
-  { name: "Diocese de União da Vitória", imgUrl: images.dioceseUV },
-  { name: "Baston Aerosóis", imgUrl: images.baston },
 ];

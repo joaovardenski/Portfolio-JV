@@ -1,6 +1,12 @@
 import { images } from "../constants";
 import { motion } from "framer-motion";
 
+const FLOATING_TECH_ICONS = [
+  { icon: images.react, sizeClass: "w-24 h-24", duration: 4 },
+  { icon: images.typescript, sizeClass: "w-40 h-40", duration: 5 },
+  { icon: images.node, sizeClass: "w-20 h-20", duration: 6 },
+];
+
 const Header = () => {
   return (
     <section
@@ -63,36 +69,29 @@ const Header = () => {
       </div>
 
         <div className="hidden md:flex flex-1 flex-col justify-evenly items-start gap-8 ml-4 md:ml-8 mt-12 md:mt-0">
-          {[images.react, images.typescript, images.node].map((circle, i) => {
-
-            const durations = [4, 5, 6];
-
-            return (
-              <motion.div
-                key={i}
-                className={`
-                  flex justify-center items-center rounded-full bg-white shadow-xl
-                  hover:shadow-2xl hover:scale-105 transition-all duration-300
-                  ${i === 0 ? "w-24 h-24" : ""}
-                  ${i === 1 ? "w-40 h-40" : ""}
-                  ${i === 2 ? "w-20 h-20" : ""}
-                `}
-                animate={{
-                  y: [0, -30, -2, -22, 0],
-                  rotate: [0, 2, -1, 1, 0],
-                  scale: [1, 1.02, 0.98, 1.01, 1],
-                }}
-                transition={{
-                  duration: durations[i],
-                  repeat: Infinity,
-                  repeatType: "mirror",
-                  ease: "easeInOut",
-                }}
-              >
-                <img src={circle} alt="tech" className="w-3/5 h-3/5" />
-              </motion.div>
-            );
-          })}
+          {FLOATING_TECH_ICONS.map(({ icon, sizeClass, duration }) => (
+            <motion.div
+              key={icon}
+              className={`
+                flex justify-center items-center rounded-full bg-white shadow-xl
+                hover:shadow-2xl hover:scale-105 transition-all duration-300
+                ${sizeClass}
+              `}
+              animate={{
+                y: [0, -30, -2, -22, 0],
+                rotate: [0, 2, -1, 1, 0],
+                scale: [1, 1.02, 0.98, 1.01, 1],
+              }}
+              transition={{
+                duration,
+                repeat: Infinity,
+                repeatType: "mirror",
+                ease: "easeInOut",
+              }}
+            >
+              <img src={icon} alt="tech" className="w-3/5 h-3/5" />
+            </motion.div>
+          ))}
         </div>
     </section>
   );

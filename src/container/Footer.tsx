@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { images } from "../constants";
 import emailjs from "emailjs-com";
+import { FormField } from "../components";
 
 const Footer = () => {
   const [formData, setFormData] = useState({
@@ -80,37 +81,29 @@ const Footer = () => {
       {/* FORM */}
       {!isFormSubmitted ? (
         <div className="w-full md:w-3/5 flex flex-col mt-4">
-          <div className="w-full bg-indigo-50 rounded-xl hover:shadow-xl transition-all mb-3">
-            <input
-              type="text"
-              name="username"
-              placeholder="Your Name"
-              value={username}
-              onChange={handleChangeInput}
-              className="w-full p-4 rounded-xl bg-indigo-100 text-gray-700 outline-none"
-            />
-          </div>
+          <FormField
+            name="username"
+            placeholder="Your Name"
+            value={username}
+            onChange={handleChangeInput}
+          />
 
-          <div className="w-full bg-indigo-50 rounded-xl hover:shadow-xl transition-all mb-3">
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              value={email}
-              onChange={handleChangeInput}
-              className="w-full p-4 rounded-xl bg-indigo-100 text-gray-700 outline-none"
-            />
-          </div>
+          <FormField
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            value={email}
+            onChange={handleChangeInput}
+          />
 
-          <div className="w-full bg-indigo-50 rounded-xl hover:shadow-xl transition-all">
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              value={message}
-              onChange={handleChangeInput}
-              className="w-full p-4 rounded-xl bg-indigo-100 text-gray-700 outline-none h-40 resize-none"
-            />
-          </div>
+          <FormField
+            as="textarea"
+            name="message"
+            placeholder="Your Message"
+            value={message}
+            onChange={handleChangeInput}
+            className=""
+          />
 
           <button
             type="button"

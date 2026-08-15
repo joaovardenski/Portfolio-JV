@@ -1,12 +1,13 @@
-import { useState } from 'react';
-import { HiMenuAlt4, HiX } from 'react-icons/hi';
-import { motion } from 'framer-motion';
-import jvicon from '../../assets/jvlogo.png';
+import { useState } from "react";
+import { HiMenuAlt4, HiX } from "react-icons/hi";
+import { motion } from "framer-motion";
+import jvicon from "../../assets/jvlogo.png";
+import MenuLinks from "./MenuLinks";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
-  const menuItems = ['home', 'about', 'works', 'skills', 'contact'];
+  const menuItems = ["home", "about", "works", "skills", "contact"];
 
   return (
     <nav
@@ -21,7 +22,7 @@ const Navbar = () => {
     >
       {/* LOGO */}
       <div className="flex justify-start items-center gap-3">
-        <img src={jvicon} alt="Logo JV" className='w-12'/>
+        <img src={jvicon} alt="Logo JV" className="w-12"/>
         <p className="bg-linear-to-r from-black to-gray-500 bg-clip-text text-transparent text-4xl font-bold">
           João Victor
         </p>
@@ -29,29 +30,7 @@ const Navbar = () => {
 
 
       {/* LINKS DESKTOP */}
-      <ul
-        className="
-          hidden md:flex 
-          justify-center items-center gap-8 list-none
-        "
-      >
-        {menuItems.map((item) => (
-          <li key={item} className="flex flex-col items-center cursor-pointer">
-            {/* bolinha */}
-            <div className="w-[5px] h-[5px] rounded-full bg-transparent mb-1 transition-all group-hover:bg-blue-500" />
-
-            <a
-              href={`#${item}`}
-              className="
-                text-gray-600 uppercase font-medium 
-                transition-all hover:text-blue-500
-              "
-            >
-              {item}
-            </a>
-          </li>
-        ))}
-      </ul>
+      <MenuLinks items={menuItems} variant="desktop" />
 
       <div
     className="
@@ -68,7 +47,7 @@ const Navbar = () => {
       <motion.div
         initial={{ x: 300 }}
         animate={{ x: 0 }}
-        transition={{ duration: 0.85, ease: 'easeOut' }}
+        transition={{ duration: 0.85, ease: "easeOut" }}
         className="
           fixed top-0 bottom-0 right-0 z-50
           w-[85%] h-screen
@@ -87,22 +66,7 @@ const Navbar = () => {
             João Victor
         </p>
 
-        <ul className="flex flex-col gap-2 w-full"> 
-          {menuItems.map((item) => (
-            <li key={item} className="w-full py-3">
-              <a
-                href={`#${item}`}
-                onClick={() => setToggle(false)}
-                className="
-                  text-gray-600 uppercase  text-xl 
-                  hover:text-blue-600 transition-all block w-full
-                "
-              >
-                {item}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <MenuLinks items={menuItems} variant="mobile" onItemClick={() => setToggle(false)} />
       </motion.div>
     )}
   </div>

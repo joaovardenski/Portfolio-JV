@@ -29,30 +29,6 @@
     0% { transform: scale(0); opacity: 0; }
     100% { transform: scale(1); opacity: 1; }
   }
-
-/* ==== NATURAL FLOAT ANIMATION ==== */
---animate-float: float 6s ease-in-out infinite;
---animate-float-slow: float 7s ease-in-out infinite;
---animate-float-fast: float 5s ease-in-out infinite;
-
-@keyframes float {
-  0% {
-    transform: translateY(0px) rotate(0deg) scale(1);
-  }
-  25% {
-    transform: translateY(-10px) rotate(1.5deg) scale(1.02);
-  }
-  50% {
-    transform: translateY(-4px) rotate(-1deg) scale(0.98);
-  }
-  75% {
-    transform: translateY(-12px) rotate(1deg) scale(1.01);
-  }
-  100% {
-    transform: translateY(0px) rotate(0deg) scale(1);
-  }
-}
-
 }
 
 :root {

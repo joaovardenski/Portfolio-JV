@@ -1,14 +1,12 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 
-import { skillsData, experiencesData } from "../data/skillsData";
+import { skillsData } from "../data/skillsData";
+import { experiencesData } from "../data/experiencesData";
+import { fadeInKeyframes } from "../utils/motionVariants";
 
 const Skills = () => {
-  const [skills] = useState(skillsData);
-  const [experiences] = useState(experiencesData);
-
   return (
     <section id="skills" className="w-full py-16 px-4 md:px-8">
       <h2 className="text-2xl md:text-4xl font-bold text-center mb-10">
@@ -18,9 +16,9 @@ const Skills = () => {
       <div className="w-full flex flex-col md:flex-row gap-12 md:gap-20 justify-center">
         {/* SKILLS LIST */}
         <motion.div className="flex flex-wrap justify-center md:justify-start gap-6 flex-1">
-          {skills.map((skill) => (
+          {skillsData.map((skill) => (
             <motion.div
-              whileInView={{ opacity: [0, 1] }}
+              {...fadeInKeyframes}
               transition={{ duration: 0.4 }}
               key={skill.name}
               className="flex flex-col items-center"
@@ -39,11 +37,11 @@ const Skills = () => {
 
         {/* EXPERIENCES */}
         <div className="flex flex-col flex-1">
-          {experiences.map((exp) => (
+          {experiencesData.map((exp) => (
             <motion.div
               key={exp.year}
               className="flex gap-10 md:gap-14 items-start mb-6"
-              whileInView={{ opacity: [0, 1] }}
+              {...fadeInKeyframes}
               transition={{ duration: 0.5 }}
             >
               <p className="text-lg font-bold text-indigo-600">{exp.year}</p>
@@ -52,7 +50,7 @@ const Skills = () => {
                 {exp.works.map((work) => (
                   <div key={work.name}>
                     <motion.div
-                      whileInView={{ opacity: [0, 1] }}
+                      {...fadeInKeyframes}
                       className="cursor-pointer"
                       data-tooltip-id={work.name}
                       data-tooltip-content={work.desc}

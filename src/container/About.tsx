@@ -1,9 +1,8 @@
-import { motion } from "framer-motion";
-import { aboutsData } from "../data/aboutsData";
+import { profilesData } from "../data/profilesData";
+import { Card } from "../components";
+import { fadeIn } from "../utils/motionVariants";
 
 const About = () => {
-  const abouts = aboutsData;
-
   return (
     <section
       id="about"
@@ -24,29 +23,28 @@ const About = () => {
 
       {/* ===== PROFILES GRID ===== */}
       <div className="flex flex-wrap justify-center items-start mt-12 gap-10">
-        {abouts.map((about, index) => (
-          <motion.div
-            key={about.title + index}
-            whileInView={{ opacity: 1 }}
-            initial={{ opacity: 0 }}
+        {profilesData.map((profile, index) => (
+          <Card
+            key={profile.title + index}
+            {...fadeIn}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.4, type: "tween" }}
             className="
-              w-[85%] max-w-80 md:w-62 
-              flex flex-col items-start 
-              bg-white rounded-xl shadow-lg 
+              w-[85%] max-w-80 md:w-62
+              flex flex-col items-start
+              rounded-xl shadow-lg
               p-5
             "
           >
             <img
-              src={about.imgUrl}
-              alt={about.title}
+              src={profile.imgUrl}
+              alt={profile.title}
               className="w-full h-48 md:h-56 object-cover rounded-lg"
             />
 
-            <h3 className="mt-4 text-lg font-semibold">{about.title}</h3>
-            <p className="mt-2 text-sm text-gray-600">{about.description}</p>
-          </motion.div>
+            <h3 className="mt-4 text-lg font-semibold">{profile.title}</h3>
+            <p className="mt-2 text-sm text-gray-600">{profile.description}</p>
+          </Card>
         ))}
       </div>
 
